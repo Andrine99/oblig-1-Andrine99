@@ -1,4 +1,4 @@
-let kinobilletter = [];
+let kinobilletter = []; //gjør om arrayet fra kjopBillett-funksjonen globale for å hente den til slettBillett-funksjonen
 
 function kjopBillett() {
 
