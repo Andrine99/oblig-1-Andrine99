@@ -25,25 +25,25 @@ function kjopBillett() {
         document.getElementById("feilAntall").innerHTML = "";
     }
     if(billett1.fornavn === ""){
-        document.getElementById("feilFornavn").innerHTML = "Må skrive noe inn i fornavn";
+        document.getElementById("feilFornavn").innerHTML = "Må skrive inn fornavn";
     }
     else{
         document.getElementById("feilFornavn").innerHTML = "";
     }
     if(billett1.etternavn === ""){
-        document.getElementById("feilEtternavn").innerHTML = "Må skrive noe inn i etternavn";
+        document.getElementById("feilEtternavn").innerHTML = "Må skrive inn etternavn";
     }
     else {
         document.getElementById("feilEtternavn").innerHTML = "";
     }
     if(billett1.telefonnummer === ""){
-        document.getElementById("feilTlfnr").innerHTML = "Må skrive noe inn i telefonnummer";
+        document.getElementById("feilTlfnr").innerHTML = "Må skrive inn telefonnummer";
     }
     else {
         document.getElementById("feilTlfnr").innerHTML = "";
     }
     if(billett1.epost === ""){
-        document.getElementById("feilEpost").innerHTML = "Må skrive noe inn i epost";
+        document.getElementById("feilEpost").innerHTML = "Må skrive inn e-postadresse";
     }
     else {
         document.getElementById("feilEpost").innerHTML = "";
