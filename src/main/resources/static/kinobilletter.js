@@ -9,7 +9,7 @@ function kjopBillett() {
     let valgtTelefonnr = document.getElementById("telefonnr").value;
     let valgtEpost = document.getElementById("epost").value;
 
-    const kinobillett1 = {  //Lager et objekt og setter inn lagde variabler
+    const kinobillett1 = {  //Lager et objekt og setter inn lagde variable
         film: valgtFilm,
         antall: valgteBilletter,
         fornavn: valgtFornavn,
