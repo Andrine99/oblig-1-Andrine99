@@ -1,4 +1,4 @@
-let kinobilletter = []; //gjør om arrayet fra kjopBillett-funksjonen globale for å hente den til slettBillett-funksjonen
+let billettene = [];
 
 function kjopBillett() {
 
@@ -9,19 +9,70 @@ function kjopBillett() {
     let valgtTelefonnr = document.getElementById("telefonnr").value;
     let valgtEpost = document.getElementById("epost").value;
 
-    const kinobillett1 = {  //Lager et objekt og setter inn lagde variable
+    const billett1 = {
         film: valgtFilm,
         antall: valgteBilletter,
         fornavn: valgtFornavn,
         etternavn: valgtEtternavn,
-        telefonnr: valgtTelefonnr,
+        telefonnummer: valgtTelefonnr,
         epost: valgtEpost
     };
 
-    if(kinobillett1.antall ==="") {
-        document.getElementById("feilAntall").innerHTML = "Må skrive inn i antall:";
+    if(billett1.antall === ""){
+        document.getElementById("feilAntall").innerHTML = "Må skrive noe inn i antall";
     }
-    else {
+    else{
         document.getElementById("feilAntall").innerHTML = "";
     }
+    if(billett1.fornavn === ""){
+        document.getElementById("feilFornavn").innerHTML = "Må skrive noe inn i fornavn";
+    }
+    else{
+        document.getElementById("feilFornavn").innerHTML = "";
+    }
+    if(billett1.etternavn === ""){
+        document.getElementById("feilEtternavn").innerHTML = "Må skrive noe inn i etternavn";
+    }
+    else {
+        document.getElementById("feilEtternavn").innerHTML = "";
+    }
+    if(billett1.telefonnummer === ""){
+        document.getElementById("feilTlfnr").innerHTML = "Må skrive noe inn i telefonnummer";
+    }
+    else {
+        document.getElementById("feilTlfnr").innerHTML = "";
+    }
+    if(billett1.epost === ""){
+        document.getElementById("feilEpost").innerHTML = "Må skrive noe inn i epost";
+    }
+    else {
+        document.getElementById("feilEpost").innerHTML = "";
+    }
+
+    billettene.push(billett1);
+    skrivUt();
+
+    document.getElementById("filmer").value = "";
+    document.getElementById("antall").value = "";
+    document.getElementById("fornavn").value = "";
+    document.getElementById("etternavn").value = "";
+    document.getElementById("telefonnr").value = "";
+    document.getElementById("epost").value = "";
+
+}
+
+function skrivUt() { //kjører gjennom en for-løkke for å skrive ut verdier vi har laget i objektet og satt inn i arrayet.
+    let ut = "";
+    for (let i = 0; i < billettene.length; i++) {
+        ut += "Kinofilm: "+billettene[i].film + "Antall billetter: " + billettene[i].antall + " .Navn: " + billettene[i].fornavn
+            + " " + billettene[i].etternavn + " .Telefonnummer: " + billettene[i].telefonnummer +
+            " .E-post: " + billettene[i].epost+ "<br>";
+    }
+    document.getElementById("utskrift").innerHTML = ut;
+}
+function slettBillett() {
+
+    billettene = [];
+    console.log(billettene);
+    skrivUt();
 }

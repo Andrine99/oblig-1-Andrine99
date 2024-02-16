@@ -2,66 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bestilling av kinobilletter</title>
+    <title>Drammen Kino</title>
     <script src="kinobilletter.js"></script>
 </head>
-
 <body>
 
 <h1>Bestilling av kinobilletter</h1>
 
-<label for="filmer">Velg film:</label>
+
+<label for="filmer">Velg film: </label>
 <select id="filmer">
     <option value="Velg film her">Velg film her</option>
-    <option value="Pippi Langstrømpe">Pippi Langstrømpe</option>
     <option value="Emil i Lønneberget">Emil i Lønneberget</option>
+    <option value="Pippi Langstrømpe">Pippi Langstrømpe</option>
     <option value="Ronja Røverdatter">Ronja Røverdatter</option>
 </select>
 
 <br>
 <br>
 
-<label for="antall">Antall:</label>
-<input id="antall" size="1" type="text" value=""/>
+<label for="antall">Antall: </label>
+<input id="antall" type="text">
 <span id="feilAntall" style="color: darkred"></span>
 
 <br>
 <br>
 
-<label for="fornavn">Fornavn:</label>
-<input id="fornavn" type="text" value=""/>
+<label for="fornavn">Fornavn: </label>
+<input id="fornavn" type="text">
 <span id="feilFornavn" style="color: darkred"></span>
 
 <br>
+<br>
 
-<label for="etternavn">Etternavn:</label>
-<input id="etternavn" type="text" value=""/>
+<label for="etternavn">Etternavn: </label>
+<input id="etternavn" type="text">
 <span id="feilEtternavn" style="color: darkred"></span>
 
-<br>
-
-<label for="telefonnr">Telefonnr:</label>
-<input id="telefonnr" type="text" value=""/>
-<span id="feilTelefonnr" style="color: darkred"></span>
 
 <br>
+<br>
 
-<label for="epost">E-post:</label>
-<input id="epost" type="email" value=""/>
+<label for="telefonnr">Telefonnr: </label>
+<input id="telefonnr" type="text">
+<span id="feilTlfnr" style="color: darkred"></span>
+
+<br>
+<br>
+
+<label for="epost">E-post: </label>
+<input id="epost" type="text">
 <span id="feilEpost" style="color: darkred"></span>
 
 <br>
+<br>
 
 <button onclick="kjopBillett();">Kjøp billett</button>
-
 
 <h2>Alle billetter</h2>
 
 <div id="utskrift"></div>
 
 <br>
-<br>
 
-<button onclick="slettBillett();">Slett alle billettene</button>
+<button onclick="slettBillett()">Slett alle billettene</button>
+
 </body>
 </html>
