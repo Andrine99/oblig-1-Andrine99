@@ -9,7 +9,7 @@ function kjopBillett() {
     let valgtTelefonnr = document.getElementById("telefonnr").value;
     let valgtEpost = document.getElementById("epost").value;
 
-    const kinobillett1 = {
+    const kinobillett1 = {  //Lager et objekt og setter inn lagde variabler
         film: valgtFilm,
         antall: valgteBilletter,
         fornavn: valgtFornavn,
@@ -22,6 +22,6 @@ function kjopBillett() {
         document.getElementById("feilAntall").innerHTML = "Må skrive inn i antall:";
     }
     else {
-        document.getElementById("feilAntall").innerHTML= "";
+        document.getElementById("feilAntall").innerHTML = "";
     }
 }
