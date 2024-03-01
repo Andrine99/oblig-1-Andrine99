@@ -1,5 +1,8 @@
 let billettene = [];
 
+let telefonRegex = /^\d{8}$/;
+let epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 function kjopBillett() {
 
     let valgtFilm = document.getElementById("filmer").value;
@@ -36,14 +39,14 @@ function kjopBillett() {
     else {
         document.getElementById("feilEtternavn").innerHTML = "";
     }
-    if(billett1.telefonnummer === ""){
-        document.getElementById("feilTlfnr").innerHTML = "Må skrive inn telefonnummer";
+    if(!telefonRegex.test(valgtTelefonnr)){
+        document.getElementById("feilTlfnr").innerHTML = "Må skrive inn et gyldig telefonnummer";
     }
     else {
         document.getElementById("feilTlfnr").innerHTML = "";
     }
-    if(billett1.epost === ""){
-        document.getElementById("feilEpost").innerHTML = "Må skrive inn e-postadresse";
+    if(!epostRegex.test(valgtEpost)){
+        document.getElementById("feilEpost").innerHTML = "Må skrive inn en gyldig e-postadresse";
     }
     else {
         document.getElementById("feilEpost").innerHTML = "";
